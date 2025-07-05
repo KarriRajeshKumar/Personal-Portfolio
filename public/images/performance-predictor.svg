@@ -1,0 +1,19 @@
+<svg width="400" height="225" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="predictorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#predictorGradient)" opacity="0.1"/>
+  <rect x="120" y="80" width="160" height="80" fill="white" stroke="url(#predictorGradient)" stroke-width="2" rx="5"/>
+  <line x1="140" y1="120" x2="180" y2="100" stroke="url(#predictorGradient)" stroke-width="3"/>
+  <line x1="180" y1="100" x2="220" y2="130" stroke="url(#predictorGradient)" stroke-width="3"/>
+  <line x1="220" y1="130" x2="260" y2="110" stroke="url(#predictorGradient)" stroke-width="3"/>
+  <circle cx="140" cy="120" r="4" fill="url(#predictorGradient)"/>
+  <circle cx="180" cy="100" r="4" fill="url(#predictorGradient)"/>
+  <circle cx="220" cy="130" r="4" fill="url(#predictorGradient)"/>
+  <circle cx="260" cy="110" r="4" fill="url(#predictorGradient)"/>
+  <text x="200" y="180" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Performance Predictor</text>
+  <text x="200" y="200" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">ML-Based Student Analytics</text>
+</svg> 

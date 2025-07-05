@@ -1,0 +1,18 @@
+<svg width="400" height="225" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#blogGradient)" opacity="0.1"/>
+  <rect x="80" y="40" width="240" height="140" fill="white" stroke="url(#blogGradient)" stroke-width="2" rx="8"/>
+  <rect x="100" y="60" width="200" height="8" fill="url(#blogGradient)" opacity="0.7"/>
+  <rect x="100" y="80" width="160" height="8" fill="url(#blogGradient)" opacity="0.5"/>
+  <rect x="100" y="100" width="180" height="8" fill="url(#blogGradient)" opacity="0.5"/>
+  <rect x="100" y="120" width="140" height="8" fill="url(#blogGradient)" opacity="0.5"/>
+  <rect x="100" y="140" width="120" height="8" fill="url(#blogGradient)" opacity="0.5"/>
+  <rect x="100" y="160" width="100" height="8" fill="url(#blogGradient)" opacity="0.5"/>
+  <text x="200" y="180" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Blog Page</text>
+  <text x="200" y="200" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">Multi-Page React Application</text>
+</svg> 

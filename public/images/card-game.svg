@@ -1,0 +1,47 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#fef3c7" rx="20" ry="20"/>
+  
+  <!-- Game Title -->
+  <text x="200" y="40" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Card Matching Game</text>
+  
+  <!-- Card Grid -->
+  <g transform="translate(50, 80)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="80" y="0" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="160" y="0" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="240" y="0" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="100" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="80" y="100" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="160" y="100" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    <rect x="240" y="100" width="60" height="80" fill="white" stroke="#f59e0b" stroke-width="3" rx="8" ry="8"/>
+    
+    <!-- Card Symbols -->
+    <text x="30" y="50" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♠</text>
+    <text x="110" y="50" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♥</text>
+    <text x="190" y="50" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♣</text>
+    <text x="270" y="50" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♦</text>
+    
+    <text x="30" y="150" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♠</text>
+    <text x="110" y="150" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♥</text>
+    <text x="190" y="150" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♣</text>
+    <text x="270" y="150" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">♦</text>
+  </g>
+  
+  <!-- Timer -->
+  <rect x="150" y="220" width="100" height="30" fill="url(#gameGradient)" rx="15" ry="15"/>
+  <text x="200" y="240" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">02:30</text>
+  
+  <!-- Score -->
+  <text x="200" y="270" text-anchor="middle" fill="#92400e" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Score: 8/12</text>
+</svg> 

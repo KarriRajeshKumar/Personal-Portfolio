@@ -1,0 +1,15 @@
+<svg width="400" height="225" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="visionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#visionGradient)" opacity="0.1"/>
+  <rect x="100" y="60" width="200" height="120" fill="white" stroke="url(#visionGradient)" stroke-width="3" rx="10"/>
+  <circle cx="150" cy="100" r="15" fill="url(#visionGradient)" opacity="0.6"/>
+  <circle cx="250" cy="100" r="15" fill="url(#visionGradient)" opacity="0.6"/>
+  <path d="M 140 130 Q 200 150 260 130" stroke="url(#visionGradient)" stroke-width="3" fill="none"/>
+  <text x="200" y="180" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Vision Sketch</text>
+  <text x="200" y="200" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">AI Sketch-to-Caption Generation</text>
+</svg> 
