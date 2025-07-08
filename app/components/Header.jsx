@@ -106,9 +106,10 @@ export default function Header() {
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out ${
             isMenuOpen
-              ? "max-h-96 opacity-100 visible"
-              : "max-h-0 opacity-0 invisible"
-          } overflow-hidden`}
+              ? "max-h-[calc(100vh-64px)] opacity-100 visible overflow-y-auto"
+              : "max-h-0 opacity-0 invisible overflow-hidden"
+          }`}
+          style={{ scrollbarGutter: "stable" }}
         >
           <nav className="py-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
             {navItems.map((item) => (
