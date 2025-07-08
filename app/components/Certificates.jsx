@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react"
-import { Award, Calendar, CheckCircle, ExternalLink } from "lucide-react"
+import { Award, Calendar, ExternalLink } from "lucide-react"
 
 export default function Certificates() {
   const [isVisible, setIsVisible] = useState(false)
@@ -13,7 +13,7 @@ export default function Certificates() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
     if (sectionRef.current) {
@@ -87,7 +87,11 @@ export default function Certificates() {
   ]
 
   return (
-    <section id="certificates" ref={sectionRef} className="py-16 lg:py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section
+      id="certificates"
+      ref={sectionRef}
+      className="py-16 lg:py-24 bg-white dark:bg-gray-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-200 to-pink-200 dark:from-purple-600 dark:to-pink-600 rounded-full opacity-20 animate-float"></div>
       <div
@@ -99,7 +103,9 @@ export default function Certificates() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-center mb-16 transform transition-all duration-1000 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6">
               My{" "}
@@ -114,7 +120,7 @@ export default function Certificates() {
           </div>
 
           {/* Certificates Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             {certificates.map((cert, index) => (
               <div
                 key={index}
