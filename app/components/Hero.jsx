@@ -30,9 +30,8 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)]">
-            {/* Left Side - Profile Image */}
-            <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start order-2 lg:order-1">
-              {/* KRK Logo/Title */}
+            {/* Left Side - Profile Image (First on mobile) */}
+            <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start order-1 lg:order-1">
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
                 KRK
               </h2>
@@ -47,9 +46,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right Side - Content */}
-            <div className="text-center lg:text-left order-1 lg:order-2">
-              {/* Main Heading */}
+            {/* Right Side - Content (Second on mobile) */}
+            <div className="text-center lg:text-left order-2 lg:order-2">
               <h1
                 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 transform transition-all duration-1000 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
@@ -58,14 +56,12 @@ export default function Hero() {
                 </span>
               </h1>
 
-              {/* Subtitle */}
               <p
                 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-purple-200 mb-6 sm:mb-8 transform transition-all duration-1000 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
                 Full Stack Developer & Machine Learning Enthusiast
               </p>
 
-              {/* Description */}
               <p
                 className={`text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 transform transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
@@ -73,7 +69,6 @@ export default function Hero() {
                 making technology more useful and intelligent.
               </p>
 
-              {/* CTA Buttons */}
               <div
                 className={`flex flex-col sm:flex-row gap-4 sm:gap-6 transform transition-all duration-1000 delay-1100 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
               >
