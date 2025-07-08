@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react"
-import { ExternalLink, Github, Star, Code, Zap } from "lucide-react"
+import { ExternalLink, Github, Code, Zap } from "lucide-react"
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false)
@@ -27,114 +27,72 @@ export default function Projects() {
     {
       title: "Personal Voice Assistant",
       description:
-        "A web-based voice assistant that uses the Web Speech API to recognize voice commands and respond with speech synthesis. Features real-time voice interaction and task automation through browser-based speech recognition.",
+        "A web-based voice assistant using Web Speech API for real-time voice commands and speech synthesis, enabling smooth voice interaction and task automation.",
       techStack: ["HTML", "CSS", "JavaScript", "Web Speech API"],
       githubUrl: "https://github.com/KarriRajeshKumar",
       liveUrl: "https://personal-voice-assistant.vercel.app/",
-      featured: true,
       color: "from-purple-500 to-pink-500",
       bgColor: "from-purple-200 to-pink-200",
       bgColorDark: "from-purple-800/40 to-pink-800/40",
       image: "/images/voice-assistant.svg",
-      features: [
-        "Speech recognition using Web Speech API",
-        "Text-to-speech synthesis",
-        "Voice command processing",
-        "Real-time voice interaction",
-      ],
     },
     {
       title: "Vision Sketch",
       description:
-        "A web application that uses Gemini API to generate descriptive captions from user-drawn sketches. Features an interactive canvas interface where users can draw and receive AI-powered text descriptions in real-time.",
+        "Interactive canvas web app leveraging Gemini API to convert sketches into AI-powered descriptive captions in real-time, enhancing creative expression through image analysis.",
       techStack: ["HTML", "CSS", "JavaScript", "React", "Gemini API"],
       githubUrl: "https://github.com/KarriRajeshKumar/Vision-Sketch",
       liveUrl: "https://vision-sketch.vercel.app/",
-      featured: true,
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-200 to-cyan-200",
       bgColorDark: "from-blue-800/40 to-cyan-800/40",
       image: "/images/vision-sketch.svg",
-      features: [
-        "Interactive canvas drawing interface",
-        "Gemini API integration for image analysis",
-        "Real-time sketch-to-text conversion",
-        "AI-powered descriptive captions",
-      ],
     },
     {
       title: "Student Performance Predictor",
       description:
-        "A machine learning application that predicts student academic performance using data-driven insights. Analyzes various factors to provide actionable recommendations for improvement.",
+        "A machine learning tool predicting student academic outcomes with data visualization and predictive modeling to provide actionable insights for improvement.",
       techStack: ["HTML", "CSS", "JavaScript", "Machine Learning", "Data Analysis"],
       githubUrl: "https://github.com/KarriRajeshKumar/Student-Performance-Predictor",
-      featured: false,
       color: "from-amber-500 to-orange-500",
       bgColor: "from-amber-200 to-orange-200",
       bgColorDark: "from-amber-800/40 to-orange-800/40",
       image: "/images/performance-predictor.svg",
-      features: [
-        "ML-based performance prediction",
-        "Data analysis and visualization",
-        "Predictive modeling",
-        "Student insights dashboard",
-      ],
     },
     {
       title: "Card Matching Game",
       description:
-        "An engaging memory game that challenges players to find matching pairs of cards. Features a countdown timer and smooth animations for an interactive gaming experience.",
+        "An engaging memory game featuring countdown timer, card flip animations, and score tracking for an interactive and fun user experience.",
       techStack: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://karrirajeshkumar.github.io/Card-Matching-Game/",
       githubUrl: "https://github.com/KarriRajeshKumar/Card-Matching-Game",
-      featured: false,
       color: "from-orange-500 to-red-500",
       bgColor: "from-orange-200 to-red-200",
       bgColorDark: "from-orange-800/40 to-red-800/40",
       image: "/images/card-game.svg",
-      features: [
-        "Memory-based gameplay",
-        "Countdown timer functionality",
-        "Card flip animations",
-        "Score tracking system",
-      ],
     },
     {
       title: "Blog Page",
       description:
-        "A modern blog application with multi-page functionality and client-side routing. Features responsive design, reusable components, and an intuitive user interface.",
+        "Modern multi-page blog app with client-side routing, reusable components, and responsive design for seamless content presentation.",
       techStack: ["HTML", "CSS", "JavaScript", "React", "React Router"],
       githubUrl: "https://github.com/KarriRajeshKumar",
-      featured: false,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-200 to-purple-200",
       bgColorDark: "from-indigo-800/40 to-purple-800/40",
       image: "/images/blog-page.svg",
-      features: [
-        "Multi-page blog application",
-        "Client-side routing",
-        "Reusable components",
-        "Responsive design",
-      ],
     },
     {
       title: "TodoList Application",
       description:
-        "A comprehensive todo list application with task management, categories, priority levels, and local storage. Features a clean interface with drag-and-drop functionality and progress tracking.",
+        "Comprehensive todo app with task management, priority levels, categories, drag-and-drop support, and local storage persistence.",
       techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
       liveUrl: "https://todolist2004.ccbp.tech/",
       githubUrl: "https://github.com/KarriRajeshKumar",
-      featured: false,
       color: "from-teal-500 to-cyan-500",
       bgColor: "from-teal-200 to-cyan-200",
       bgColorDark: "from-teal-800/40 to-cyan-800/40",
       image: "/todo-text.svg",
-      features: [
-        "Task creation and management",
-        "Priority levels and categories",
-        "Local storage persistence",
-        "Progress tracking dashboard",
-      ],
     },
   ]
 
@@ -159,7 +117,9 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-center mb-16 transform transition-all duration-1000 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
               Featured{" "}
@@ -184,10 +144,10 @@ export default function Projects() {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div
-                  className={`relative bg-gradient-to-r ${project.bgColor} ${index === 0 ? "dark:bg-gradient-to-l" : "dark:bg-gradient-to-r"} dark:${project.bgColorDark} rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 hover:border-transparent overflow-hidden h-full`}
+                  className={`relative bg-gradient-to-r ${project.bgColor} ${
+                    index === 0 ? "dark:bg-gradient-to-l" : "dark:bg-gradient-to-r"
+                  } dark:${project.bgColorDark} rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 hover:border-transparent overflow-hidden h-full`}
                 >
-
-
                   {/* Background Decoration */}
                   <div
                     className={`absolute -top-16 -right-16 w-32 h-32 bg-gradient-to-r ${project.color} opacity-10 rounded-full`}
@@ -202,17 +162,17 @@ export default function Projects() {
                           alt={project.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextSibling.style.display = 'flex';
+                            e.target.style.display = "none"
+                            e.target.nextSibling.style.display = "flex"
                           }}
                         />
                         <div className="hidden absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-500 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
-                              <Code size={24} className="text-white" />
-                            </div>
-                            <p className="text-gray-600 dark:text-gray-300 font-medium">{project.title}</p>
+                          <div
+                            className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-full flex items-center justify-center mx-auto mb-3`}
+                          >
+                            <Code size={24} className="text-white" />
                           </div>
+                          <p className="text-gray-600 dark:text-gray-300 font-medium">{project.title}</p>
                         </div>
                       </div>
                     </div>
@@ -239,34 +199,13 @@ export default function Projects() {
                           href={project.githubUrl || "https://github.com/KarriRajeshKumar"}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`p-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full hover:scale-110 hover:rotate-12 transition-all duration-300 shadow-lg`}
+                          className="p-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full hover:scale-110 hover:rotate-12 transition-all duration-300 shadow-lg"
                         >
                           <Github size={18} />
                         </a>
                       </div>
                     </div>
                     <p className="text-gray-700 dark:text-gray-100 leading-relaxed mb-6">{project.description}</p>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
-                      <Zap size={18} className="text-yellow-500" />
-                      Key Features
-                    </h4>
-                    <div className="space-y-2">
-                      {project.features.map((feature, featureIndex) => (
-                        <div
-                          key={featureIndex}
-                          className="flex items-start gap-3 p-3 bg-white/70 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl hover:bg-white/90 dark:hover:bg-gray-800/70 transition-all duration-300 group/feature"
-                        >
-                          <div
-                            className={`w-2 h-2 bg-gradient-to-r ${project.color} rounded-full mt-2 flex-shrink-0 group-hover/feature:scale-150 transition-transform duration-300`}
-                          ></div>
-                          <span className="text-gray-700 dark:text-gray-100 text-sm leading-relaxed">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
 
                   {/* Tech Stack */}
@@ -298,7 +237,9 @@ export default function Projects() {
 
           {/* View More on GitHub Button */}
           <div
-            className={`text-center mt-16 transform transition-all duration-1000 delay-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-center mt-16 transform transition-all duration-1000 delay-1000 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <a
               href="https://github.com/KarriRajeshKumar"
