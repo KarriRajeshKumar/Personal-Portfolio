@@ -112,12 +112,13 @@ export default function About() {
           </div>
 
           <div
-            className={`mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 transform transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 transform transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             {[
               { number: "100+", label: "Students Mentored", color: "from-blue-500 to-cyan-500" },
               { number: "300+", label: "LeetCode Problems", color: "from-purple-500 to-pink-500" },
               { number: "250+", label: "Learning Days", color: "from-orange-500 to-red-500" },
+              { number: "9.79", label: "CGPA", color: "from-green-500 to-emerald-500" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div
