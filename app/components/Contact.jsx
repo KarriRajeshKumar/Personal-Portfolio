@@ -14,7 +14,7 @@ export default function Contact() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
     if (sectionRef.current) {
@@ -63,33 +63,12 @@ export default function Contact() {
     },
   ]
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus("Sending...")
-    const form = e.target
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    }
-    const res = await fetch("https://formspree.io/f/yourformid", { // <-- PUT YOUR FORMSPREE ENDPOINT HERE
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data),
-    })
-    if (res.ok) {
-      setStatus("Message sent!")
-      form.reset()
-    } else {
-      setStatus("Failed to send. Please try again.")
-    }
-  }
-
   return (
-    <section id="contact" ref={sectionRef} className="py-16 lg:py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="py-16 lg:py-24 bg-white dark:bg-gray-900 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-200 to-pink-200 dark:from-purple-600 dark:to-pink-600 rounded-full opacity-20 animate-float"></div>
       <div
@@ -101,7 +80,9 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-center mb-16 transform transition-all duration-1000 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6">
               Get In{" "}
@@ -115,7 +96,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Methods Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16">
             {contactMethods.map((method, index) => (
               <div
                 key={index}
@@ -153,7 +134,9 @@ export default function Contact() {
 
           {/* Main Contact Card */}
           <div
-            className={`transform transition-all duration-1000 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`transform transition-all duration-1000 delay-500 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-blue-900/20 rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/50 dark:border-gray-700/50 relative overflow-hidden">
               {/* Background Pattern */}
@@ -198,7 +181,6 @@ export default function Contact() {
                   </a>
                 </div>
 
-                {/* Location Info */}
                 <div className="mt-8 flex items-center justify-center gap-2 text-gray-600 dark:text-gray-300">
                   <MapPin size={18} />
                   <span className="text-sm">Based in Andhra Pradesh, India</span>
@@ -208,9 +190,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      {/* Remove the inline contact form at the bottom of the Contact section */}
-      {/* The form is now only available at /contact-form */}
     </section>
   )
 }
