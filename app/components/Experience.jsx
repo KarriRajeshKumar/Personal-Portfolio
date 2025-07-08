@@ -81,8 +81,8 @@ export default function Experience() {
             </p>
           </div>
 
-          {/* Experience Cards Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Equal-height Responsive Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
             {experiences.map((exp, index) => (
               <div
                 key={index}
@@ -91,14 +91,12 @@ export default function Experience() {
                 }`}
               >
                 <div
-                  className={`relative bg-gradient-to-r ${exp.bgColor} dark:bg-gradient-to-l dark:${exp.bgColorDark} rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 dark:border-gray-600/50 hover:border-transparent overflow-hidden`}
+                  className={`relative h-full flex flex-col justify-between bg-gradient-to-r ${exp.bgColor} dark:bg-gradient-to-l dark:${exp.bgColorDark} rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 dark:border-gray-600/50 hover:border-transparent overflow-hidden`}
                 >
-                  {/* Background Blur */}
                   <div
                     className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-r ${exp.color} opacity-10 rounded-full -translate-y-16 translate-x-16`}
                   ></div>
 
-                  {/* Header */}
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8">
                     <div className="flex items-start gap-6 mb-6 lg:mb-0">
                       <div
@@ -126,7 +124,7 @@ export default function Experience() {
                   </div>
 
                   {/* Achievements */}
-                  <div className="mb-2">
+                  <div>
                     <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
                       <Briefcase size={20} className="text-purple-600" />
                       Key Achievements
