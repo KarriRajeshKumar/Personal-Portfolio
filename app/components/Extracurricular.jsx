@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react"
-import { Users, Award, Calendar, MapPin, Star, Trophy, Target } from "lucide-react"
+import { Users, Award, Calendar, MapPin } from "lucide-react"
 
 export default function Extracurricular() {
   const [isVisible, setIsVisible] = useState(false)
@@ -29,50 +29,30 @@ export default function Extracurricular() {
       organization: "Computer Society of India",
       duration: "2023 - Present",
       location: "GMRIT",
-      description: "Leading and coordinating technical activities, workshops, and events for the Computer Society of India chapter at GMRIT. Organizing coding competitions, hackathons, and technical seminars to promote computer science education and innovation.",
-      achievements: [
-        "Organized multiple technical workshops and coding competitions",
-        "Increased student participation in CSI events by 40%",
-        "Coordinated successful hackathons and tech talks",
-        "Mentored junior students in programming and technology"
-      ],
+      description:
+        "Leading and coordinating technical activities, workshops, and events for the Computer Society of India chapter at GMRIT. Organizing coding competitions, hackathons, and technical seminars to promote computer science education and innovation.",
       icon: Users,
       color: "from-blue-500 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50",
       bgColorDark: "from-blue-900/20 to-cyan-900/20",
-      stats: {
-        events: "15+",
-        participants: "200+",
-        workshops: "8"
-      }
     },
     {
       role: "Vice President of Student Council",
       organization: "Student Council GMRIT",
       duration: "2023 - Present",
       location: "GMRIT",
-      description: "Serving as Vice President of the Student Council, representing student interests and coordinating various campus activities. Leading initiatives for student welfare, cultural events, and academic support programs.",
-      achievements: [
-        "Led successful campus-wide cultural and technical events",
-        "Implemented student feedback systems and improvement programs",
-        "Coordinated with faculty and administration for student initiatives",
-        "Managed student council budget and event planning"
-      ],
+      description:
+        "Serving as Vice President of the Student Council, representing student interests and coordinating various campus activities. Leading initiatives for student welfare, cultural events, and academic support programs.",
       icon: Award,
       color: "from-pink-500 to-orange-500",
       bgColor: "from-pink-50 to-orange-50",
       bgColorDark: "from-pink-900/20 to-orange-900/20",
-      stats: {
-        events: "12+",
-        initiatives: "5",
-        feedback: "95%"
-      }
-    }
+    },
   ]
 
   return (
-    <section 
-      id="extracurricular" 
+    <section
+      id="extracurricular"
       ref={sectionRef}
       className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden"
     >
@@ -91,21 +71,25 @@ export default function Extracurricular() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`text-center mb-16 transform transition-all duration-1000 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6">
               Extracurricular{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Activities</span>
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Activities
+              </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
             <p className="text-gray-600 dark:text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-              Leadership roles and activities that demonstrate my commitment to community building, 
+              Leadership roles and activities that demonstrate my commitment to community building,
               technical excellence, and student development.
             </p>
           </div>
 
           {/* Activities Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {activities.map((activity, index) => (
               <div
                 key={activity.role}
@@ -115,7 +99,7 @@ export default function Extracurricular() {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div
-                  className={`relative bg-gradient-to-r ${activity.bgColor} dark:bg-gradient-to-l dark:${activity.bgColorDark} rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 dark:border-gray-600/50 hover:border-transparent overflow-hidden h-full`}
+                  className={`relative h-full flex flex-col justify-between bg-gradient-to-r ${activity.bgColor} dark:bg-gradient-to-l dark:${activity.bgColorDark} rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-white/50 dark:border-gray-600/50 hover:border-transparent overflow-hidden`}
                 >
                   {/* Background Decoration */}
                   <div
@@ -124,7 +108,9 @@ export default function Extracurricular() {
 
                   {/* Role Header */}
                   <div className="flex items-start gap-4 mb-6 relative z-10">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${activity.color} text-white shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
+                    <div
+                      className={`p-4 rounded-2xl bg-gradient-to-r ${activity.color} text-white shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}
+                    >
                       <activity.icon size={28} />
                     </div>
                     <div className="flex-1">
@@ -148,30 +134,11 @@ export default function Extracurricular() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 dark:text-gray-200 mb-6 leading-relaxed relative z-10">
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed relative z-10">
                     {activity.description}
                   </p>
 
-                  {/* Achievements */}
-                  <div className="relative z-10">
-                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
-                      <Trophy size={20} className="text-yellow-500" />
-                      Key Achievements
-                    </h4>
-                    <ul className="space-y-3">
-                      {activity.achievements.map((achievement, achievementIndex) => (
-                        <li
-                          key={achievementIndex}
-                          className="flex items-start gap-3 text-gray-700 dark:text-gray-200 group/item"
-                        >
-                          <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform duration-300"></div>
-                          <span className="leading-relaxed group-hover/item:text-purple-600 dark:group-hover/item:text-purple-400 transition-colors duration-300">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Bottom Border Animation */}
+                  {/* Hover Bottom Border */}
                   <div
                     className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${activity.color} w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl`}
                   ></div>
@@ -183,4 +150,4 @@ export default function Extracurricular() {
       </div>
     </section>
   )
-} 
+}
