@@ -36,7 +36,7 @@ export default function Experience() {
       achievements: ["100+ Students Mentored", "100+ Problems Resolved", "95% Student Satisfaction", "Expert in Python Teaching"],
     },
     {
-      title: "Volunteer Educator",
+      title: "Python Instructor",
       company: "Government School Initiative",
       period: "June 2024 - July 2024",
       type: "Community Impact Project",
