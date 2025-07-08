@@ -77,22 +77,15 @@ export default function About() {
             >
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
-                  I'm a passionate <span className="font-semibold text-purple-600 dark:text-purple-400">full-stack developer</span> and{" "}
-                  <span className="font-semibold text-pink-600 dark:text-pink-400">machine learning enthusiast</span> currently pursuing my
-                  Bachelor of Technology at GMR Institute of Technology with an outstanding CGPA of{" "}
-                  <span className="font-bold text-green-600 dark:text-green-400">9.79</span>.
+                  I'm a passionate <span className="font-semibold text-purple-600 dark:text-purple-400">Full-Stack developer</span> and{" "}
+                  <span className="font-semibold text-pink-600 dark:text-pink-400">Machine Learning Enthusiast</span> currently pursuing my
+                  Bachelor of Technology at GMR Institute of Technology.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
-                  My journey in technology is driven by the vision to create{" "}
-                  <span className="font-semibold text-blue-600 dark:text-blue-400">intelligent web applications</span> that combine the
-                  power of modern web development with machine learning capabilities. I believe in building solutions
-                  that are not just functional, but truly smart and impactful.
+                  I thrive at the intersection of modern web development and intelligent systems—building applications that think, adapt, and elevate user experience. My work is driven by curiosity, experimentation, and a mission to turn complex ideas into elegant, real-world solutions.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
-                  When I'm not coding, you'll find me{" "}
-                  <span className="font-semibold text-indigo-600 dark:text-indigo-400">mentoring students</span>, contributing to community
-                  projects, or exploring the latest trends in AI and web development. I'm always eager to learn, grow,
-                  and share knowledge with fellow developers.
+                  Beyond code, I actively <span className="font-semibold text-indigo-600 dark:text-indigo-400">mentor budding developers</span>, contribute to community initiatives, and stay plugged into the latest innovations in AI and tech. I'm here to build boldly, learn endlessly, and make a meaningful impact.
                 </p>
               </div>
             </div>
@@ -128,7 +121,6 @@ export default function About() {
             className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 transform transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
           >
             {[
-              { number: "9.79", label: "CGPA", color: "from-green-500 to-emerald-500" },
               { number: "100+", label: "Students Mentored", color: "from-blue-500 to-cyan-500" },
               { number: "300+", label: "LeetCode Problems", color: "from-purple-500 to-pink-500" },
               { number: "250+", label: "Learning Days", color: "from-orange-500 to-red-500" },
