@@ -156,23 +156,6 @@ export default function Skills() {
                     ))}
                   </div>
 
-                  {/* Skill Level Indicator */}
-                  <div className="mt-6 relative">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Zap size={16} className="text-yellow-500" />
-                      <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Proficiency</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div
-                        className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 group-hover:animate-pulse`}
-                        style={{
-                          width: index === 0 ? "90%" : index === 1 ? "85%" : index === 2 ? "80%" : "75%",
-                          animationDelay: `${index * 0.3}s`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-
                   {/* Hover Effect Border */}
                   <div
                     className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${category.color} w-0 group-hover:w-full transition-all duration-700 rounded-b-3xl`}
@@ -180,33 +163,6 @@ export default function Skills() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Additional Skills Section */}
-          <div
-            className={`mt-16 text-center transform transition-all duration-1000 delay-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-          >
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-3xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-                Always{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Learning
-                </span>
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Currently exploring Machine Learning, AI technologies, Data Structures and Algorithms, and advanced web development frameworks to stay at the forefront of technology.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {["Machine Learning", "AI/ML", "Advanced React", "Data Structures and Algorithms"].map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium hover:from-purple-200 hover:to-pink-200 dark:hover:from-purple-800/40 dark:hover:to-pink-800/40 hover:scale-105 transition-all duration-300 cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
